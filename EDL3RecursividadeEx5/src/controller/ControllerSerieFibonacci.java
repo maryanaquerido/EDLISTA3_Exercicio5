@@ -1,0 +1,41 @@
+package controller;
+
+public class ControllerSerieFibonacci {
+	public ControllerSerieFibonacci() {
+        super();
+    }
+	
+	public int SerieFibonacci (int num) {
+		if (num == 0) { // CONDIÇÃO DE PARADA: QUANDO NUM FOR 0 OU 1, RETORNAMOS 0 OU 1, PORQUE SÃO AS DUAS PRIMEIRAS POSIÇOES DA SÉRIE.
+			return 0;
+		}
+		else 
+		if (num == 1) { // CONDIÇÃO DE PARADA
+            return 1;
+		}
+		else {
+			return SerieFibonacci (num - 1) + SerieFibonacci (num - 2);
+			
+		}
+	}
+	
+}
+
+// RELAÇÃO DE CHAMADA DE PASSOS:
+//EXEMPLO SE NUM = 5 
+
+//1. SERIEFIBONACCI(5) 
+//2. DENTRO DE SERIEFIBONACCI(5), CALCULAMOS SERIEFIBONACCI(4) + SERIEFIBONACCI(3). 
+//3. DENTRO DE SERIEFIBONACCI(4), CALCULAMOS SERIEFIBONACCI(3) + SERIEFIBONACCI(2). 
+//4. DENTRO DE SERIEFIBONACCI(3), CALCULAMOS SERIEFIBONACCI(2) + SERIEFIBONACCI(1).
+//5. DENTRO DE SERIEFIBONACCI(2), CALCULAMOS SERIEFIBONACCI(1) + SERIEFIBONACCI(0).
+//6. SERIEFIBONACCI(1) -> NUM == 1, RETORNA 1.
+//7. SERIEFIBONACCI(0) -> NUM == 0, RETORNA 0. 
+
+//8. SERIEFIBONACCI(2) RETORNA FIBONACCI(1) + FIBONACCI(0) = 1 + 0 = 1. 
+//9. SERIEFIBONACCI(3) RETORNA FIBONACCI(2) + FIBONACCI(1) = 1 + 1 = 2.
+//10. SERIEFIBONACCI(4) RETORNA FIBONACCI(3) + FIBONACCI(2) = 2 + 1 = 3.
+//11. SERIEFIBONACCI(5) RETORNA FIBONACCI(4) + FIBONACCI(3) = 3 + 2 = 5
+
+//12. RESP = 15
+
